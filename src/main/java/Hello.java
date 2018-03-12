@@ -18,4 +18,11 @@ public class Hello {
   public String dog() {
     return "You're getting a doge, dude!";
   }
+
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  @Path("dog")
+  public Dog createDog() {
+    return new Dog();
+  }
 }
